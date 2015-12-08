@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class FenceHealth : MonoBehaviour {
-
+	
 	public bool isAlive;
 	public int health; 
-
+	
 	AudioSource audioSource;
 	TextMesh tm;
 	

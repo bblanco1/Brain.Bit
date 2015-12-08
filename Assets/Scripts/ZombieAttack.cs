@@ -2,18 +2,18 @@
 using System.Collections;
 
 public class ZombieAttack : MonoBehaviour {
-
+	
 	GameObject player;
 	Animator animator;
 	bool playerInRange;
-
+	
 	// Use this for initialization
 	void Awake () 
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
 		animator = GetComponent<Animator> ();
 	}
-
+	
 	void OnTriggerEnter (Collider other) 
 	{
 		if (other.gameObject == player) 
@@ -23,11 +23,11 @@ public class ZombieAttack : MonoBehaviour {
 			//Destroy(gameObject);
 		}
 	}
-
+	
 	void OnTriggerExit (Collider other) 
 	{
 		if (other.gameObject == player) 
-		{	
+		{    
 			playerInRange = false;
 		}
 	}
@@ -41,7 +41,7 @@ public class ZombieAttack : MonoBehaviour {
 		} else {
 			animator.SetBool ("isAttacking", false);
 		}
-
+		
 	}
-
+	
 }
