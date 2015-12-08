@@ -15,9 +15,9 @@ public class Spawn : MonoBehaviour {
 	}
 	
 	void SpawnNext() {
-		//if(TowersAvailableManager.towersAvailable < 2){
+		if(TowersAvailableManager.towersAvailable < 2){
 			Instantiate(zombiePrefab, transform.position, Quaternion.identity);
-		//}
+		}
 	}
 	
 	

@@ -4,7 +4,7 @@ using System.Collections;
 public class FenceHealth : MonoBehaviour {
 	
 	public bool isAlive;
-	public int health; 
+	public static int health; 
 	
 	AudioSource audioSource;
 	TextMesh tm;
@@ -13,6 +13,7 @@ public class FenceHealth : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		isAlive = true;
+		GameManagerScript.playerIsDead = false;
 		health = 8;
 		tm = GetComponent<TextMesh>();
 		audioSource = GetComponent<AudioSource> ();
@@ -32,6 +33,7 @@ public class FenceHealth : MonoBehaviour {
 	void Death()
 	{
 		isAlive = false;
+		GameManagerScript.playerIsDead = true;
 		Destroy(transform.parent.gameObject);
 		
 	}
