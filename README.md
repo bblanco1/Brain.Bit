@@ -1,4 +1,4 @@
-#Brain.Bit
+# Brain.Bit
 
 Brain.Bit is an innovative app that allows users to experience tower defense through through the camera of their iOS device using augmented reality. 
 
